@@ -79,3 +79,13 @@ class TestLowestCommonAncestor(unittest.TestCase):
 
         answer = LowestCommonAncestor.LCA(root, 7, 7)
         self.assertEqual(answer, -1)
+
+#testing failsafe of findRoute
+    def test_findRoute(self):
+
+        root = None
+        route = None
+        x = None
+
+        answer = LowestCommonAncestor.findRoute(root, route, x)
+        self.assertIs(answer, False)
