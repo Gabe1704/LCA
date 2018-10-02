@@ -70,4 +70,12 @@ class TestLowestCommonAncestor(unittest.TestCase):
         root = Node(1)
 
         answer = LowestCommonAncestor.LCA(root, 1, 1)
-        self.assertEqual(answer, 1)              
+        self.assertEqual(answer, 1)
+
+# testing to see if my invalid tree failsafe works
+    def test_LCANone(self):
+
+        root = None
+
+        answer = LowestCommonAncestor.LCA(root, 7, 7)
+        self.assertEqual(answer, -1)
