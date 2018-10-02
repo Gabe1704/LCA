@@ -81,7 +81,7 @@ class TestLowestCommonAncestor(unittest.TestCase):
         self.assertEqual(answer, -1)
 
 #testing failsafe of findRoute
-    def test_findRoute(self):
+    def test_findRoute1(self):
 
         root = None
         route = None
@@ -89,3 +89,13 @@ class TestLowestCommonAncestor(unittest.TestCase):
 
         answer = LowestCommonAncestor.findRoute(root, route, x)
         self.assertIs(answer, False)
+
+#testing second failsafe of findRoute
+    def test_findRoute2(self):
+
+        root = Node(1)
+        route = []
+        x = 1
+
+        answer = LowestCommonAncestor.findRoute(root, route, x)
+        self.assertIs(answer, True)
