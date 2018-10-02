@@ -62,4 +62,12 @@ class TestLowestCommonAncestor(unittest.TestCase):
         root.right.right = Node(7)
 
         answer = LowestCommonAncestor.LCA(root, 1, 1)
-        self.assertEqual(answer, 1)       
+        self.assertEqual(answer, 1)
+
+# testing what happens if I just use a tree with only a root
+    def test_LCAOnlyRoot(self):
+
+        root = Node(1)
+
+        answer = LowestCommonAncestor.LCA(root, 1, 1)
+        self.assertEqual(answer, 1)              
