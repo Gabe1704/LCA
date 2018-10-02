@@ -42,15 +42,3 @@ def LCA(root, n1, n2):
             break
         i += 1
     return route1[i-1]
-
-#root = Node(1)
-#root.left = Node(2)
-#root.right = Node(3)
-#root.left.left = Node(4)
-#root.left.right = Node(5)
-#root.right.left = Node(6)
-#root.right.right = Node(7)
-
-#print ("LCA(2, 7) = %d" %(LCA(root, 2, 7,)))
-#print ("LCA(2, 5) = %d" %(LCA(root, 2, 5)))
-#print ("LCA(4, 6) = %d" %(LCA(root,4,6)))
